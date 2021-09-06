@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import s from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({onClick, options}) => (
+const FeedbackOptions = ({ onClick, options }) => (
     <div>
         {options.map(option => (
-            <button 
-            type="button" 
-            onClick={onClick}
-            className={s.button}
+            <button
+                key={option}
+                type="button"
+                onClick={onClick}
+                className={s.button}
             >
                 {option}
             </button>
